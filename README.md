@@ -1,1 +1,43 @@
 
+Overview of The Project - MovieFlix : 
+
+This is a Machine Learning- Content based Movie Recommendation System built using Python and Django.
+It suggests movies to users based on similarity between movie features using vectorization and cosine similarity.
+
+
+
+features:
+
+Recommend similar movies based on user input
+TF-IDF / vector-based similarity model
+Fast and lightweight prediction Using KNN 
+Simple Django web interface
+ML model loaded using pickle
+
+
+
+workflow:
+
+Movie dataset is preprocessed
+Text features are converted into vectors (TF-IDF / CountVectorizer)
+Cosine similarity is calculated between all movies
+When a user selects a movie, the system finds nearest vectors Using KNn
+Top similar movies are displayed as recommendations
+
+
+
+Project Structure:
+
+movie-recommender/
+│
+├── model.pkl
+├── movies.pkl
+├── finalVectors.pkl
+│
+├── app/
+│   ├── views.py
+│   ├── urls.py
+│   ├── templates/
+│
+├── manage.py
+└── README.md

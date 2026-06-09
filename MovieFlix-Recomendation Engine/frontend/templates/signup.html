@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MovieVerse - Sign Up</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#141414;
+            color:white;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .signup-box{
+            width:420px;
+            background:#1f1f1f;
+            padding:40px;
+            border-radius:10px;
+            box-shadow:0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .logo{
+            text-align:center;
+            color:#E50914;
+            font-size:45px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:5px;
+            background:#333;
+            color:white;
+            font-size:15px;
+        }
+
+        input:focus{
+            outline:none;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#E50914;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#c40812;
+        }
+
+        .login-link{
+            text-align:center;
+            margin-top:20px;
+        }
+
+        .login-link a{
+            color:#E50914;
+            text-decoration:none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="signup-box">
+
+        <div class="logo">
+            MOVIEFLIX
+        </div>
+
+        <h2>CREATE ACCOUNT</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required>
+
+            <button type="submit">
+                SIGN UP
+            </button>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+        </div>
+
+    </div>
+     
+</body>
+ 
+</html>
+

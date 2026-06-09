@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+
+body{
+    background:#141414;
+    color:white;
+    font-family:Arial;
+}
+
+.container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:400px;
+    background:#222;
+    padding:40px;
+    border-radius:10px;
+}
+
+.logo{
+    color:#E50914;
+    text-align:center;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#333;
+    border:none;
+    color:white;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#E50914;
+    border:none;
+    color:white;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-box">
+
+        <h1 class="logo">MOVIEFLIX</h1>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input type="text"
+                   name="username"
+                   placeholder="Username">
+
+            <input type="password"
+                   name="password"
+                   placeholder="Password">
+            <a >
+            <button >
+                LOGIN
+            </button>
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
